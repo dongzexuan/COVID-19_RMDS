@@ -16,3 +16,11 @@ def newsapi_summaries(q, start=None, sort=None):
     r = requests.get(url)
     articles = r.json()['articles']
     return articles
+
+
+def gnewsapi_summaries(query):
+    API_Token = '02bc6d7c6aca458da20650457dd6c934'
+    url = 'https://gnews.io/api/v3/search?q={}&token={}'.format(query,API_Token)
+    r = requests.get(url)
+    articles = r.json()['articles']
+    return articles
