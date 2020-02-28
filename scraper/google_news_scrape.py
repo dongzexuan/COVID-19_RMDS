@@ -4,7 +4,7 @@ import time
 from random import randint
 
 
-def scrape_news_summaries(s, city):
+def scrape_news_summaries(s):
     time.sleep(randint(0, 2))  # setup a limit
     r = requests.get("http://www.google.com/search?q="+s+"&tbm=nws")
     content = r.content
@@ -24,7 +24,7 @@ def scrape_news_summaries(s, city):
                   'content': content,
                   'url': url,
                   'publishTime': publishtime,
-                  'city': city.lower().capitalize()}
+                  }
         news_summaries.append(record)
     return news_summaries
 

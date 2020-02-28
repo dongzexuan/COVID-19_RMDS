@@ -24,3 +24,8 @@ def gnewsapi_summaries(query):
     r = requests.get(url)
     articles = r.json()['articles']
     return articles
+
+
+def twitterapi_summaries(query):
+    # to be finished
+    pass
