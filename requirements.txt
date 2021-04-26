@@ -1,3 +1,8 @@
 requests==2.21.0
 bs4
 pandas
+TwitterSearch
+twython
+lxml
+openpyxl
+html5lib
